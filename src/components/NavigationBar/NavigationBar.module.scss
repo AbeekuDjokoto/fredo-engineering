@@ -1,0 +1,28 @@
+.root {
+  // padding: 24px 44px;
+  .nav__top {
+    display: flex;
+    padding: 15px 44px;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
+    background-color: var(--horizontalLine);
+    a {
+      display: flex;
+      gap: 5px;
+      &:hover {
+        color: var(--white);
+      }
+    }
+    img {
+      width: 22px;
+      height: 22px;
+    }
+  }
+  .second__nav {
+    padding: 24px 44px;
+    border: 1px solid blue;
+    display: flex;
+    justify-content: space-between;
+  }
+}
