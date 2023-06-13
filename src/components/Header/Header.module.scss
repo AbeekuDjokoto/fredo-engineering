@@ -1,0 +1,45 @@
+.root {
+  .main {
+    position: relative;
+    .textContent {
+      position: absolute;
+      top: 30%;
+      .title {
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 34px;
+      }
+      .motto {
+        font-size: 1.25rem;
+        line-height: 28px;
+      }
+      .headerImage {
+        // position: relative;
+        object-fit: cover;
+        max-width: 1440px;
+        width: 100%;
+        height: 711px;
+      }
+      &:hover {
+        color: var(--horizontalLine);
+        transition: color 0.5s ease;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .root {
+    .title {
+      font-size: 3rem;
+      line-height: 59px;
+      display: flex;
+      align-items: center;
+      letter-spacing: 1.3px;
+    }
+    .motto {
+      font-size: 2rem;
+      line-height: 40px;
+    }
+  }
+}

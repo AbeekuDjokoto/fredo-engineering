@@ -1,0 +1,18 @@
+.root {
+  padding: 117px 0;
+  .horizontalLine {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid var(--horizontalLine);
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+    span {
+      background: var(--black);
+      padding: 0 86px;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 26px;
+      text-transform: uppercase;
+    }
+  }
+}
