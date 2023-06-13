@@ -3,8 +3,11 @@ import telephone from "../../assets/telephone.png";
 import mail from "../../assets/mail.png";
 import { Link } from "react-router-dom";
 import hamburgerMenu from "../../assets/hamburger.svg";
+import cx from "classnames";
+import { useState } from "react";
 
 export const NavigationBar = () => {
+  const [open, setOpen] = useState(false);
   return (
     <nav className={classes.root}>
       <div className={classes.nav__top}>
@@ -23,16 +26,26 @@ export const NavigationBar = () => {
           <h3>Fredo Engineering</h3>
           <p>Engineering Excellence in Motion.</p>
         </div>
-        <div className="flex gap-3 text-[var(--horizontalLine)] items-center">
+        <div className={classes.mobile} onClick={() => setOpen(!open)}>
+          <figure>
+            <img src={hamburgerMenu} alt="hamburger menu" />
+          </figure>
+          {open && (
+            <div className={classes.dropdown}>
+              <h1>This is a baller</h1>
+            </div>
+          )}
+        </div>
+        <div
+          className={cx(
+            classes.web,
+            "flex gap-3 text-[var(--horizontalLine)] items-center"
+          )}
+        >
           <p>Services</p>
           <p>Projects</p>
           <p>Recommendation</p>
           <p>Contact Us</p>
-        </div>
-        <div>
-          <figure>
-            <img src={hamburgerMenu} alt="hamburger menu" />
-          </figure>
         </div>
       </div>
     </nav>

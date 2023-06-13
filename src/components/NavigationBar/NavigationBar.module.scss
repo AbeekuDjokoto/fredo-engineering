@@ -1,5 +1,10 @@
 .root {
   // padding: 24px 44px;
+
+  .mobile {
+    cursor: pointer;
+  }
+
   .nav__top {
     display: flex;
     padding: 15px 44px;
@@ -20,9 +25,26 @@
     }
   }
   .second__nav {
-    padding: 24px 44px;
-    border: 1px solid blue;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 24px 44px;
+    .web {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .root {
+    .second__nav {
+      border: 1px solid blue;
+      .web {
+        display: inline-flex;
+      }
+    }
+    .mobile {
+      display: none;
+    }
   }
 }
