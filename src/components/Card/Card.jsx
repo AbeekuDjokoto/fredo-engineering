@@ -2,7 +2,6 @@ import classes from "./Card.module.scss";
 import PropTypes from "prop-types";
 
 export const Card = (props) => {
-  console.log(props);
   return (
     <div className={classes.root} key={props.id}>
       <div>
@@ -11,8 +10,9 @@ export const Card = (props) => {
         </figure>
         <hr className={classes.horizontalRule} />
       </div>
-
-      <h2 className={classes.title}>{props.title}</h2>
+      <div className={classes.textBg}>
+        <h2 className={classes.title}>{props.title}</h2>
+      </div>
     </div>
   );
 };

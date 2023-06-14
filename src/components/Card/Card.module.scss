@@ -1,7 +1,7 @@
 .root {
   width: 540px;
-  height: 268px;
-  background: #2b2c2d;
+  background: var(--bg);
+  transition: flex-grow 0.3s;
   img {
     height: 234px;
     object-fit: cover;
@@ -20,5 +20,13 @@
     align-items: center;
     text-transform: uppercase;
     color: var(--white);
+  }
+  .textBg {
+    background: var(--black);
+    padding-top: 15px;
+  }
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
   }
 }
