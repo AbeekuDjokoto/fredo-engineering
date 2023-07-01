@@ -8,9 +8,13 @@ import { useState } from "react";
 
 export const NavigationBar = () => {
   const [open, setOpen] = useState(false);
+  const handleSkillsClick = (navigation) => {
+    const skillsSection = document.getElementById(navigation);
+    skillsSection.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <nav className={classes.root}>
-      <div className={classes.nav__top}>
+      <div className={classes.nav__top} id="contact-us">
         <Link to="tel:0208219820">
           <img src={telephone} alt="telephone number" />
           <p>0208219820</p>
@@ -42,10 +46,14 @@ export const NavigationBar = () => {
             "flex gap-3 text-[var(--horizontalLine)] items-center"
           )}
         >
-          <p>Services</p>
-          <p>Projects</p>
-          <p>Recommendation</p>
-          <p>Contact Us</p>
+          <Link onClick={() => handleSkillsClick("services")}>Services</Link>
+          <Link onClick={() => handleSkillsClick("projects")}>Projects</Link>
+          <Link onClick={() => handleSkillsClick("clients")}>
+            Recommendation
+          </Link>
+          <Link onClick={() => handleSkillsClick("contact-us")}>
+            Contact Us
+          </Link>
         </div>
       </div>
     </nav>
