@@ -4,6 +4,7 @@ import { projects, recommendations } from "../../mocks/data";
 import { RecommendationCard } from "../../components";
 
 export const Main = () => {
+  // comment
   return (
     <div className={classes.root} id="projects">
       <h2 className={classes.horizontalLine}>
