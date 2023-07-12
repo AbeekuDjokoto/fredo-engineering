@@ -17,7 +17,7 @@ export const NavigationBar = () => {
       <div className={classes.nav__top} id="contact-us">
         <Link to="tel:0208219820">
           <img src={telephone} alt="telephone number" />
-          <p>0208219820</p>
+          <p>0208219820, 0249898346</p>
         </Link>
         <Link to="mail:fdjokoto@yahoo.com">
           <img src={mail} alt="mail to fredo-engineering" />

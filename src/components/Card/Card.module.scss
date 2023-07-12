@@ -1,5 +1,6 @@
 .root {
-  width: 540px;
+  max-width: 400px;
+  width: 100%;
   background: var(--bg);
   transition: flex-grow 0.3s;
   img {
@@ -7,6 +8,8 @@
     object-fit: cover;
     display: flex;
     justify-content: center;
+    max-width: 400px;
+    width: 100%;
   }
   hr {
     height: 4px;
@@ -23,7 +26,9 @@
   }
   .textBg {
     background: var(--black);
-    padding-top: 15px;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
   }
   &:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);

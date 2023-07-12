@@ -5,7 +5,7 @@ export const Card = (props) => {
   return (
     <div className={classes.root} key={props.id}>
       <div>
-        <figure className="flex justify-center pt-4">
+        <figure className="flex justify-center">
           <img src={props.img} alt={props.title} />
         </figure>
         <hr className={classes.horizontalRule} />
