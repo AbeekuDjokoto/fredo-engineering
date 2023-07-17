@@ -2,12 +2,9 @@ import classes from "./NavigationBar.module.scss";
 import telephone from "../../assets/telephone.png";
 import mail from "../../assets/mail.png";
 import { Link } from "react-router-dom";
-import hamburgerMenu from "../../assets/hamburger.svg";
 import cx from "classnames";
-import { useState } from "react";
 
 export const NavigationBar = () => {
-  const [open, setOpen] = useState(false);
   const handleSkillsClick = (navigation) => {
     const skillsSection = document.getElementById(navigation);
     skillsSection.scrollIntoView({ behavior: "smooth" });
@@ -26,19 +23,12 @@ export const NavigationBar = () => {
       </div>
       <div className={classes.second__nav}>
         <div>
-          <img src="" alt="brand image" />
-          <h3>Fredo Engineering</h3>
-          <p>Engineering Excellence in Motion.</p>
-        </div>
-        <div className={classes.mobile} onClick={() => setOpen(!open)}>
-          <figure>
-            <img src={hamburgerMenu} alt="hamburger menu" />
-          </figure>
-          {open && (
-            <div className={classes.dropdown}>
-              <h1>This is a baller</h1>
-            </div>
-          )}
+          <h3 className="text-[#F1811A]">
+            FREDO ENGINEERING AND CONSULTANCY SERVICES
+          </h3>
+          <p className="text-white">
+            Milling and Drying solutions to all Industries
+          </p>
         </div>
         <div
           className={cx(

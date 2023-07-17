@@ -8,7 +8,6 @@ export const LandingPage = () => {
       <NavigationBar />
       <Header />
       <Main />
-      LandingPage
     </div>
   );
 };
